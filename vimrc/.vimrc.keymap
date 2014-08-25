@@ -1,0 +1,60 @@
+"" backtick <-> singlequote
+"inoremap ' `
+"inoremap ` '
+
+" highlight off
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+"ESC
+imap jk <ESC>
+imap ii <ESC>
+
+"backspace
+noremap <BS> 
+noremap! <BS> 
+
+"emacs style home/end
+noremap <C-a> <Home>
+noremap <C-e> <End>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+
+"Change Buf
+noremap <Tab> :bn!<CR>
+noremap <S-Tab> :bp!<CR>
+
+"Window
+nnoremap sh <C-w>h
+nnoremap sj <C-w>j
+nnoremap sk <C-w>k
+nnoremap sl <C-w>l
+nnoremap sH <C-w>H
+nnoremap sJ <C-w>J
+nnoremap sK <C-w>K
+nnoremap sL <C-w>L
+nnoremap ss :call <SID>good_size()<Cr>
+function! s:good_size()
+  if winwidth(0) < 128
+    vertical resize 128
+  endif
+  if winheight(0) < 40
+    resize 40
+  endif
+endfunction
+
+nnoremap <C-w>s :call <SID>good_size()<Cr>
+
+" vimgrep for rails
+command! -complete=file -nargs=+ RailsGrep call s:grep([<f-args>])
+function! s:grep(args)
+  execute 'vimgrep' '/' . a:args[0] . '/gj ' . './app/**/* ./lib/**/* ./config/**/* '
+  if len(getqflist()) != 0 | copen | endif
+endfunction
+
+cnoreabbr rg RailsGrep
+
+" Unite
+nnoremap <silent> ,gy :<C-u>Unite history/yank<CR>
+noremap zp :Unite buffer_tab file_mru<CR>
+noremap zn :UniteWithBufferDir -buffer-name=files file file/new<CR>
+

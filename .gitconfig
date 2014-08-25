@@ -1,0 +1,28 @@
+[user]
+	name  = Shunsuke Aoki
+	email = s-aoki@r-learning.co.jp
+[merge]
+	keepBackup = false;
+	tool = p4merge
+[mergetool "p4merge"]
+	cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+	keepTemporaries = false
+	trustExitCode = false
+	keepBackup = false
+[color]
+	ui = auto
+[core]
+	excludesfile = ~/.gitignore
+	shared = true
+[github]
+  user = blue-emc2
+[credential]
+  helper = osxkeychain
+[credential "https://github.com"]
+  username = blue-emc2
+[http]
+	sslVerify = false
+[alias]
+  delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+[push]
+	default = nothing

@@ -1,9 +1,9 @@
 set nocompatible
-source ~/dotfiles/vimrc/.vimrc.bundle
-source ~/dotfiles/vimrc/.vimrc.basic
-source ~/dotfiles/vimrc/.vimrc.indent
-source ~/dotfiles/vimrc/.vimrc.plugins
-source ~/dotfiles/vimrc/.vimrc.commentout
-source ~/dotfiles/vimrc/.vimrc.neocomplcache
-source ~/dotfiles/vimrc/.vimrc.keymap
+source ~/myvimrc/vimrc/.vimrc.bundle
+source ~/myvimrc/vimrc/.vimrc.basic
+source ~/myvimrc/vimrc/.vimrc.indent
+source ~/myvimrc/vimrc/.vimrc.plugins
+source ~/myvimrc/vimrc/.vimrc.commentout
+source ~/myvimrc/vimrc/.vimrc.neocomplcache
+source ~/myvimrc/vimrc/.vimrc.keymap
 

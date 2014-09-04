@@ -1,8 +1,10 @@
 #! /usr/bin/bash -v
 
 # dotfiles
-ln -vsf ~/dotfiles/.vimrc ~/
-ln -vsf ~/dotfiles/.gitignore ~/
+ln -vsf ~/myvimrc/.vimrc ~/
+ln -vsf ~/myvimrc/.gitignore ~/
+ln -vsf ~/myvimrc/.gitconfig ~/
+ln -vsf ~/myvimrc/.profile ~/
 
 # NeoBundle(vim)
 mkdir -p ~/.vim/bundle

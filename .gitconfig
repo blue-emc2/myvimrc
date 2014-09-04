@@ -1,3 +1,6 @@
+[user]
+  name = Shunsuke Aoki
+  email = s-aoki@r-learning.co.jp
 [merge]
 	keepBackup = false;
 	tool = p4merge

@@ -23,6 +23,7 @@ NeoBundle 'Shougo/vimproc', {
   \ },
 \ }
 NeoBundle 'rking/ag.vim'
+NeoBundle 'Shougo/neomru.vim'
 
 " for Syntax Highlight
 NeoBundle 'kchmck/vim-coffee-script'

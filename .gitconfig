@@ -25,5 +25,6 @@
 	sslVerify = false
 [alias]
   delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+  cm = commit -v
 [push]
 	default = nothing

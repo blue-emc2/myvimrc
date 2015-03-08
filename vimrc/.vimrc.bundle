@@ -37,6 +37,7 @@ NeoBundle 'joker1007/vim-ruby-heredoc-syntax'
 NeoBundle 'joker1007/vim-markdown-quote-syntax'
 
 NeoBundle 'spolu/dwm.vim'
+NeoBundle 'w0ng/vim-hybrid'
 
 call neobundle#end()
 

@@ -11,13 +11,15 @@ autocmd WinEnter,BufRead * set cursorline
 augroup END
 :hi clear CursorLine
 :hi CursorLine gui=underline
-if filereadable(expand("~/.vim/bundle/brookstream/colors/brookstream.vim"))
-  colorscheme brookstream
-endif
+"if filereadable(expand("~/.vim/bundle/brookstream/colors/brookstream.vim"))
+"  colorscheme brookstream
+"endif
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 autocmd WinEnter,VimEnter * match WhitespaceEOL /\s\+$/
 highlight CursorLine cterm=none ctermbg=236 guibg=Black
+
+colorscheme hybrid
 
 " tab/indent(default setting)
 filetype on

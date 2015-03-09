@@ -9,6 +9,7 @@ autocmd! cch
 autocmd WinLeave * set nocursorline
 autocmd WinEnter,BufRead * set cursorline
 augroup END
+
 :hi clear CursorLine
 :hi CursorLine gui=underline
 "if filereadable(expand("~/.vim/bundle/brookstream/colors/brookstream.vim"))
@@ -17,6 +18,7 @@ augroup END
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 autocmd WinEnter,VimEnter * match WhitespaceEOL /\s\+$/
+autocmd ColorScheme * highlight LineNr ctermfg=239
 highlight CursorLine cterm=none ctermbg=236 guibg=Black
 
 set t_Co=256

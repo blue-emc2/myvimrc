@@ -19,6 +19,7 @@ match WhitespaceEOL /\s\+$/
 autocmd WinEnter,VimEnter * match WhitespaceEOL /\s\+$/
 highlight CursorLine cterm=none ctermbg=236 guibg=Black
 
+set t_Co=256
 colorscheme hybrid
 
 " tab/indent(default setting)

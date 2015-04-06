@@ -38,6 +38,7 @@ NeoBundle 'joker1007/vim-markdown-quote-syntax'
 
 NeoBundle 'spolu/dwm.vim'
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'git://github.com/aharisu/vim_goshrepl.git'
 
 call neobundle#end()
 

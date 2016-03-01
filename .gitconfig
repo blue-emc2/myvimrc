@@ -24,7 +24,14 @@
 [http]
 	sslVerify = false
 [alias]
-  delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+  gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
   cm = commit -v
+  st = status
+  difff = diff --word-diff
+  br = for-each-ref --sort=committerdate refs/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 [push]
 	default = nothing
+[pull]
+	rebase = true
+[grep]
+	lineNumber = true

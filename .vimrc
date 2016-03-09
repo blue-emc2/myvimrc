@@ -1,9 +1,43 @@
 set nocompatible
-source ~/myvimrc/vimrc/.vimrc.bundle
-source ~/myvimrc/vimrc/.vimrc.basic
-source ~/myvimrc/vimrc/.vimrc.indent
-source ~/myvimrc/vimrc/.vimrc.plugins
-source ~/myvimrc/vimrc/.vimrc.commentout
-source ~/myvimrc/vimrc/.vimrc.neocomplcache
-source ~/myvimrc/vimrc/.vimrc.keymap
+
+if has('vim_starting')
+   " 初回起動時のみruntimepathにneobundleのパスを指定する
+   set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" NeoBundleを初期化
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" インストールするプラグインをここに記述
+NeoBundle 'w0ng/vim-hybrid'
+
+call neobundle#end()
+
+" ファイルタイプ別のプラグイン/インデントを有効にする
+filetype plugin indent on
+
+
+set number
+
+set ambiwidth=double
+
+"=======================================================
+" colorscheme
+" ------------------------------------------------------
+syntax on
+set background=dark
+colorscheme hybrid
+set term=screen-256color
+
+"----------------------------------------------------
+" インデント
+"----------------------------------------------------
+" オートインデントを無効にする
+set noautoindent
+" タブが対応する空白の数
+set tabstop=2
+
+set expandtab
+set softtabstop=2
+set shiftwidth=2
 

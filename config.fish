@@ -9,3 +9,5 @@ set -x PATH $HOME/.rbenv/shims $PATH
 rbenv rehash >/dev/null ^&1
 
 export XDG_CONFIG_HOME="$HOME/.config"
+
+alias vim=nvim

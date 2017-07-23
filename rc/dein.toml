@@ -1,2 +1,13 @@
 [[plugins]]
 repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+
+[[plugins]]
+repo = 'tyrannicaltoucan/vim-deep-space'
+
+

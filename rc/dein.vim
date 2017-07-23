@@ -9,16 +9,14 @@ set runtimepath+=~/.cache/nvim/repos/github.com/Shougo/dein.vim
 if dein#load_state('~/.cache/nvim')
   call dein#begin('~/.cache/nvim')
   
-  call dein#load_toml('rc/dein.toml', {'lazy': 0})
+  call dein#load_toml('~/myvimrc/rc/dein.toml', {'lazy': 0})
+  call dein#load_toml('~/myvimrc/rc/deinlazy.toml', {'lazy' : 1})
 
   " Let dein manage dein
   " Required:
   call dein#add('~/.cache/nvim/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('Shougo/deoplete.nvim')
 
   " You can specify revision/branch/tag.
   call dein#add('Shougo/vimshell', { 'rev': '3787e5' })

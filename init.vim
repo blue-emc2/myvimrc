@@ -1,4 +1,9 @@
-syntax on
+set runtimepath+=~/myvimrc
+runtime rc/dein.vim
+runtime keymap.vim
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
 
 set number
 set expandtab
@@ -8,7 +13,7 @@ set t_Co=256¬
 set termguicolors  " truecolor¬
 set background=dark
 
-execute 'set runtimepath+=~/myvimrc/'
+colorscheme deep-space
 
-runtime rc/dein.vim
+syntax on
 

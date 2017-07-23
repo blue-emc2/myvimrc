@@ -1,9 +1,9 @@
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
 set runtimepath+=~/myvimrc
 runtime rc/dein.vim
 runtime keymap.vim
-
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
 
 set number
 set expandtab

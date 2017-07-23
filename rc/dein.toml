@@ -1,13 +1,32 @@
+# =========
+# color
+# =========
 [[plugins]]
 repo = 'tomasr/molokai'
 
+[[plugins]]
+repo = 'tyrannicaltoucan/vim-deep-space'
+
+# =========
+# basic
+# =========
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
 
-[[plugins]]
-repo = 'tyrannicaltoucan/vim-deep-space'
+# =========
+# terminal
+# =========
 
+[[plugins]]
+repo = 'kassio/neoterm'
+hook_add = '''
+nnoremap <silent> ,rc :TREPLSendFile<cr>
+nnoremap <silent> ,rl :TREPLSendLine<cr>
+vnoremap <silent> ,rl :TREPLSendSelection<cr>
+nnoremap <silent> vt :Ttoggle<cr>
+nnoremap <silent> vs :terminal<cr>
+'''
 

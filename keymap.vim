@@ -24,3 +24,20 @@ nnoremap <C-k><C-g> :<C-u>Denite grep<CR>
 nnoremap <C-k><C-l> :<C-u>Denite line<CR>
 nnoremap <C-k><C-u> :<C-u>Denite file_mru<CR>
 nnoremap <C-k><C-y> :<C-u>Denite neoyank<CR>
+
+" <TAB>: completion.                                         
+" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"   
+inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>" 
+
+" Plugin key-mappings.
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif

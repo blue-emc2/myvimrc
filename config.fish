@@ -1,6 +1,5 @@
-set fisher_home ~/.config/fisherman
-set fisher_config ~/.config/fisherman
-source $fisher_home/config.fish
+set -x fisher_home ~/.config/fisherman
+set -x fisher_config ~/.config/fisherman
 
 set zealot_right_prompt_off
 
@@ -11,3 +10,5 @@ alias vim=nvim
 
 set -x EDITOR vim $EDITOR
 eval (direnv hook fish)
+
+set -x PATH $HOME/.rbenv/shims $PATH
